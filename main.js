@@ -4,7 +4,7 @@ const timerOptions = document.querySelectorAll('.option');
 const settingsIcon = document.querySelector('i');
 
 const SESSION_MIN = 25;
-const SHORT_BREAK_MIN = 1;
+const SHORT_BREAK_MIN = 5;
 const LONG_BREAK_MIN = 15;
 
 let timerEnded = false;
