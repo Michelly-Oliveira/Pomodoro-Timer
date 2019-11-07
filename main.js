@@ -20,8 +20,7 @@ let countdown;
 const alarmSound = new Audio('audio/alarm.mp3');
 
 function chooseAction() {
-  // Reset audio time
-  alarmSound.currentTime = 0;
+  resetAudio();
 
   const whichBtn = this.textContent;
 
@@ -45,6 +44,13 @@ function chooseAction() {
       reset();
       break;
   }
+}
+
+function resetAudio() {
+  // Stop audio from playing
+  alarmSound.pause();
+  // Reset audio time
+  alarmSound.currentTime = 0;
 }
 
 function setMin(time) {
