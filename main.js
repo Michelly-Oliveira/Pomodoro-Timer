@@ -26,13 +26,6 @@ function chooseAction() {
 
   switch (whichBtn) {
     case 'Start':
-      if (paused) {
-        // If timer is paused, when click start should 'unpause' the timer
-        // don't start timer again
-        toggleStop();
-        return;
-      }
-
       startTimer();
       break;
 
