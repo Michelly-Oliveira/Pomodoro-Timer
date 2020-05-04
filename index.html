@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Pomodoro Timer</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="menu">
-        <i class="fa fa-cog"></i>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Pomodoro Timer</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="menu">
+				<i class="fa fa-cog"></i>
 
-        <div class="options-wrapper">
-          <div class="option">
-            <input type="radio" name="option" id="session" value="session" checked />
-            <label for="session">Session</label>
-          </div>
+				<div class="options-wrapper">
+					<div class="option">
+						<input
+							type="radio"
+							name="option"
+							id="session"
+							value="session"
+							checked
+						/>
+						<label for="session">Session</label>
+					</div>
 
-          <div class="option">
-            <input type="radio" name="option" id="short-break" value="short-break" />
-            <label for="short-break">Short Break</label>
-          </div>
+					<div class="option">
+						<input
+							type="radio"
+							name="option"
+							id="short-break"
+							value="short-break"
+						/>
+						<label for="short-break">Short Break</label>
+					</div>
 
-          <div class="option">
-            <input type="radio" name="option" id="long-break" value="long-break" />
-            <label for="long-break">Long Break</label>
-          </div>
-        </div>
-      </div>
+					<div class="option">
+						<input
+							type="radio"
+							name="option"
+							id="long-break"
+							value="long-break"
+						/>
+						<label for="long-break">Long Break</label>
+					</div>
+				</div>
+			</div>
 
-      <h1 class="display-timer">25:00</h1>
+			<h1 class="display-timer">25:00</h1>
 
-      <div class="buttons">
-        <button class="btn btn-start">Start</button>
-        <button class="btn btn-pause">Pause</button>
-        <button class="btn btn-reset">Reset</button>
-      </div>
-    </div>
+			<div class="buttons">
+				<button class="btn btn-start">Start</button>
+				<button class="btn btn-pause">Pause</button>
+				<button class="btn btn-reset">Reset</button>
+			</div>
+		</div>
 
-    <script src="main.js"></script>
-  </body>
+		<script src="main.js"></script>
+	</body>
 </html>

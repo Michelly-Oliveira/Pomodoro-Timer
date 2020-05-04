@@ -1,179 +1,178 @@
-body {
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family: 'Mansalva', cursive;
-  color: #f7f9fb;
-  overflow: hidden;
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
-.container {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
+body {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #f7f9fb;
+	overflow: hidden;
 }
 
 .container::before {
-  background: url('img/tlou.jpg');
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  opacity: 0.7;
+	background: url('img/tlou.jpg');
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+}
+
+.container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
 }
 
 .display-timer {
-  padding: 1rem 2rem;
-  font-size: 3rem;
-  font-weight: lighter;
-  margin: 2rem auto;
+	padding: 1rem 2rem;
+	font-size: 3rem;
+	font-weight: lighter;
+	margin: 2rem auto;
 }
 
 .buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  margin: 1rem auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	margin: 1rem auto;
 }
 
 .btn {
-  padding: 0.5rem 1rem;
-  margin: 0 1rem;
-  cursor: pointer;
-  text-align: center;
-  color: #f7f9fb;
-  font-size: 1rem;
-  letter-spacing: 3px;
-  border-radius: 5px;
-  border: none;
-  transition: all 0.2s;
-}
-
-.btn:focus {
-  outline: none;
+	padding: 0.7rem;
+	margin: 0 1rem;
+	width: 150px;
+	cursor: pointer;
+	text-align: center;
+	color: #f7f9fb;
+	font-size: 1.1em;
+	letter-spacing: 3px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	transition: all 0.2s;
 }
 
 .btn:hover {
-  opacity: 0.7;
-  transform: scale(1.2);
+	opacity: 0.7;
+	transform: scale(1.2);
 }
 
 .btn-start {
-  background: #31708e;
+	background: #31708e;
 }
 
 .btn-reset {
-  background: #5085a5;
+	background: #5085a5;
 }
 .btn-pause {
-  background: #687864;
+	background: #687864;
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
 }
 
 .menu i {
-  cursor: pointer;
-  font-size: 1.5rem;
-  margin: 16px;
-  height: 25px;
-  width: 25px;
+	cursor: pointer;
+	font-size: 1.5rem;
+	margin: 16px;
+	height: 25px;
+	width: 25px;
 }
 
 .options-wrapper {
-  transform: scale(0);
-  transform-origin: left top;
-  transition: transform 0.5s ease-in;
+	transform: scale(0);
+	transform-origin: left top;
+	transition: transform 0.3s ease-in;
+	margin-left: 8px;
 }
 
 .option {
-  margin: 0 0 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1.1rem;
-  opacity: 0;
-  text-align: left;
-  transition: opacity 1s ease-in;
+	margin: 0 0 1rem;
+	padding: 0.5rem 1rem;
+	font-size: 1.2em;
+	opacity: 0;
+	text-align: left;
+	transition: opacity 0.3s ease-in;
 }
 
 .container.show-options .options-wrapper {
-  transform: scale(1);
+	transform: scale(1);
 }
 
 .container.show-options .option {
-  opacity: 1;
+	opacity: 1;
 }
 
 @media (max-width: 700px) {
-  .container::before {
-    background: url('img/tlou2.jpg');
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+	.container::before {
+		background: url('img/tlou2.jpg');
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 }
 
-@media (max-width: 400px) {
-  .display-timer {
-    font-size: 2.5rem;
-    transition: opacity 1s ease-in;
-  }
+@media (max-width: 600px) {
+	.display-timer {
+		font-size: 2.5rem;
+		transition: opacity 0.3s ease-in;
+		background: rgba(51, 51, 51, 0.781);
+		border-radius: 30px;
+	}
 
-  .buttons {
-    flex-direction: column;
-    transition: opacity 1s ease-in;
-  }
+	.buttons {
+		flex-direction: column;
+		transition: opacity 0.3s ease-in;
+	}
 
-  .btn {
-    margin: 1rem 0;
-  }
+	.btn {
+		margin: 1rem 0;
+	}
 
-  .options-wrapper {
-    position: absolute;
-    left: 100px;
-    top: 200px;
-    transform-origin: center;
-    overflow: hidden;
-    transition: 0;
-    width: 150px;
-    height: 150px;
-  }
+	.btn:hover {
+		opacity: 1;
+		transform: scale(1);
+	}
 
-  .container.show-options .options-wrapper {
-    left: 100px;
-    top: 200px;
-  }
+	.option {
+		background: rgba(51, 51, 51, 0.781);
+		border-radius: 30px;
+	}
 
-  .container.show-options .display-timer,
-  .container.show-options .buttons {
-    opacity: 0;
-  }
+	.options-wrapper {
+		transform: scale(1);
+		transform-origin: center;
+		transition: 0;
+		width: 160px;
+		position: fixed;
+		left: 30%;
+		top: 35%;
+	}
 
-  .buttons {
-    margin: 1rem auto 0 13px;
-    width: 80%;
-  }
-
-  .btn:hover {
-    opacity: 0.7;
-    transform: scale(1);
-  }
+	.container.show-options .display-timer,
+	.container.show-options .buttons {
+		opacity: 0;
+	}
 }
