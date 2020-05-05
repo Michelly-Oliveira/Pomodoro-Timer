@@ -90,6 +90,7 @@ function timerCountdown() {
 	}
 
 	// If timer reached the end, stop countdown and clear the interval
+	// clear the interval = timerCountdown won't be called every second
 	if (timerEnded) {
 		clearInterval(countdown);
 		return;
