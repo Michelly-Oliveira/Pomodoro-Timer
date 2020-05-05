@@ -152,18 +152,20 @@ body {
 	}
 
 	.btn:hover {
+		/* No hover effects no mobile */
 		opacity: 1;
 		transform: scale(1);
 	}
 
 	.option {
+		/* Already have a transition for the opacity on the desktop version */
 		background: rgba(51, 51, 51, 0.781);
 		border-radius: 30px;
 	}
 
 	.options-wrapper {
+		/* No size transition */
 		transform: scale(1);
-		transform-origin: center;
 		transition: 0;
 		width: 160px;
 		position: fixed;
