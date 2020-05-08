@@ -152,7 +152,6 @@ body {
 	}
 
 	.btn:hover {
-		/* No hover effects no mobile */
 		opacity: 1;
 		transform: scale(1);
 	}
@@ -165,7 +164,7 @@ body {
 
 	.options-wrapper {
 		/* No size transition */
-		transform: scale(1);
+		display: none;
 		transition: 0;
 		width: 160px;
 		position: fixed;
@@ -177,4 +176,8 @@ body {
 	.container.show-options .buttons {
 		opacity: 0;
 	}
+}
+
+.container.show-options .options-wrapper {
+	display: block;
 }

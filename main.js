@@ -15,13 +15,13 @@ let timeToUse = SESSION_MIN;
 let seconds = 00;
 let min;
 let countdown;
-
+console.log(buttons);
 // Audio
 const alarmSound = new Audio('audio/alarm.mp3');
 
 function chooseAction() {
 	resetAudio();
-
+	console.log(this.textContent);
 	const whichBtn = this.textContent;
 
 	switch (whichBtn) {
