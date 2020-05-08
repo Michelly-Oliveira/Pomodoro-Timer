@@ -73,7 +73,6 @@ function reset() {
 	paused = true;
 
 	setMin(timeToUse);
-	updateDisplayTimer();
 }
 
 function setMin(time) {
@@ -104,7 +103,7 @@ function timerCountdown() {
 		alarmSound.play();
 		timerEnded = true;
 	} // Check if a minute passed
-	else if (seconds < 1) {
+	else if (seconds < 0) {
 		min--;
 		seconds = 59;
 	}
