@@ -176,8 +176,8 @@ body {
 	.container.show-options .buttons {
 		opacity: 0;
 	}
-}
 
-.container.show-options .options-wrapper {
-	display: block;
+	.container.show-options .options-wrapper {
+		display: block;
+	}
 }
