@@ -9,6 +9,8 @@ const LONG_BREAK_MIN = 15;
 
 let timerEnded = false;
 let paused = false;
+// Check if pause was activated by the button Pause
+let pausedByBtn = false;
 // Start program with 25 min
 let timeToUse = SESSION_MIN;
 
@@ -26,8 +28,10 @@ function chooseAction() {
 
 	switch (whichBtn) {
 		case 'Start':
-			// If timer is paused and we click on the start btn it will unpause it and continue the timer
-			if (paused) {
+			// If paused by reset or changing timer option, it won't stop timer from starting when clicking on the btn Start - enter else statement
+			// only stop timer when clicked on the Pause btn - enter if statement
+			// If timer is paused by the btn Pause and we click on the start btn it will unpause it and continue the timer
+			if (paused && pausedByBtn) {
 				toggleStop();
 			} else {
 				// If it's not paused, start the timer from the beginning
@@ -64,6 +68,7 @@ function startTimer() {
 }
 
 function toggleStop() {
+	pausedByBtn = !pausedByBtn;
 	paused = !paused;
 }
 
